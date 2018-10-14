@@ -1,14 +1,21 @@
-# Twitter Api
+# Twitter Api #
 
-## Filter Realtime Tweets
+## Filter Realtime Tweets ##
+
 [Api Doc](https://developer.twitter.com/en/docs/tweets/filter-realtime/overview.html)
 
-POST statuses/filter 
-(Use a Post Request to avoid long URL)
+[Guide Connecting](https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/connecting.html)
 
-### Parameters
+POST statuses/filter 
+
+### Authentication ###
+
+Oauth2 User Context
+
+### Parameters ###
+
 * language=en
-* location= {Bounding Box}
-* track= {Keywords to track}
+* location= {25 Bounding Boxes}
+* track= {Upto 400 Keywords to track}
 
 
