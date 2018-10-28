@@ -1,8 +1,15 @@
-postgres:
-  image: postgres:latest
-  ports:
-    - '5432:5432'
-  environment:
-    POSTGRES_USER: 'postgres'
-    POSTGRES_PASSWORD: 'postgres'
-    POSTGRES_DB: 'dev_hrvsm'
+version: '2'
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_DB: 'dev_hrvsm'
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - '3000:3000'
