@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: 'postgres'
       POSTGRES_DB: 'dev_hrvsm'
 
-  grafana:
-    image: grafana/grafana:latest
+  webapp:
+    build: ./Grafana
     ports:
-      - '3000:3000'
+      - "3000:3000"
