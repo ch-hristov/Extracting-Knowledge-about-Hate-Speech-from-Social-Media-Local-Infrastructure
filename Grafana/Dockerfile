@@ -13,6 +13,6 @@ RUN if [ ! -z "${GF_INSTALL_PLUGINS}" ]; then \
     done; \
 fi
 
-ADD ./config.ini /etc/grafana/grafana.ini
 ADD ./provisioning /etc/grafana/provisioning
+ADD ./config.ini /etc/grafana/config.ini
 ADD ./dashboards /var/lib/grafana/dashboards
