@@ -1,46 +1,4 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_HRVSM_SS",
-      "label": "HRVSM ss",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "postgres",
-      "pluginName": "PostgreSQL"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "5.3.2"
-    },
-    {
-      "type": "panel",
-      "id": "grafana-worldmap-panel",
-      "name": "Worldmap Panel",
-      "version": "0.1.2"
-    },
-    {
-      "type": "datasource",
-      "id": "postgres",
-      "name": "PostgreSQL",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": "5.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "table",
-      "name": "Table",
-      "version": "5.0.0"
-    }
-  ],
   "annotations": {
     "list": [
       {
@@ -57,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
   "links": [
     {
       "asDropdown": true,
@@ -81,7 +38,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": "default",
+      "datasource": null,
       "decimals": 0,
       "format": "none",
       "gauge": {
@@ -131,10 +88,10 @@
         "lineColor": "rgb(31, 120, 193)",
         "show": false
       },
-      "tableColumn": "",
+      "tableColumn": "count",
       "targets": [
         {
-          "format": "time_series",
+          "format": "table",
           "group": [
             {
               "params": [
@@ -146,7 +103,7 @@
           ],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT\n  $__timeGroupAlias(created_at,$__interval),\n  count(tweet) AS \"tweet\"\nFROM tweets\nWHERE\n  $__timeFilter(created_at)\nGROUP BY 1\nORDER BY 1",
+          "rawSql": "SELECT\n  count(tweet)\nFROM\n  tweets\nwhere\n  $__timeFilter(created_at)\n",
           "refId": "A",
           "select": [
             [
@@ -201,14 +158,13 @@
       "valueName": "current"
     },
     {
-      "circleMaxSize": "15",
-      "circleMinSize": 2,
+      "circleMaxSize": "20",
+      "circleMinSize": "3",
       "colors": [
-        "rgba(50, 172, 45, 0.97)",
-        "rgba(237, 129, 40, 0.89)",
-        "#890f02"
+        "#ef843c",
+        "#e24d42"
       ],
-      "datasource": "default",
+      "datasource": null,
       "decimals": 0,
       "esMetric": "Count",
       "gridPos": {
@@ -220,12 +176,12 @@
       "hideEmpty": false,
       "hideZero": false,
       "id": 2,
-      "initialZoom": "3",
+      "initialZoom": "2",
       "links": [],
       "locationData": "countries",
-      "mapCenter": "custom",
-      "mapCenterLatitude": "50",
-      "mapCenterLongitude": "80",
+      "mapCenter": "(0°, 0°)",
+      "mapCenterLatitude": 0,
+      "mapCenterLongitude": 0,
       "maxDataPoints": 1,
       "mouseWheelZoom": false,
       "showLegend": true,
@@ -251,7 +207,7 @@
           ],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT\n  $__timeGroupAlias(created_at,$__interval),\n  count(tweet) as datapoints,\n  country_code as target\nFROM tweets\nWHERE\n  $__timeFilter(created_at)\nGROUP BY \ncountry_code, created_at",
+          "rawSql": "SELECT\n  $__time(created_at),\n  count(tweet) as datapoints,\n  country_code as target\nFROM tweets\nWHERE\n  $__timeFilter(created_at)\nGROUP BY \ncountry_code, created_at",
           "refId": "A",
           "select": [
             [
@@ -281,7 +237,7 @@
           ]
         }
       ],
-      "thresholds": "0,10",
+      "thresholds": "100",
       "title": "Potential Human Rights Violations",
       "type": "grafana-worldmap-panel",
       "unitPlural": "Violations",
@@ -291,7 +247,7 @@
     },
     {
       "columns": [],
-      "datasource": "default",
+      "datasource": null,
       "fontSize": "100%",
       "gridPos": {
         "h": 19,
@@ -327,7 +283,7 @@
           "decimals": 2,
           "mappingType": 1,
           "pattern": "tweet",
-          "preserveFormat": true,
+          "preserveFormat": false,
           "thresholds": [],
           "type": "string",
           "unit": "short"
@@ -346,7 +302,7 @@
           "pattern": "confidence",
           "thresholds": [],
           "type": "number",
-          "unit": "percentunit"
+          "unit": "percent"
         },
         {
           "alias": "Country",
@@ -362,6 +318,38 @@
           "pattern": "country_code",
           "thresholds": [],
           "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "id",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "tweet_id",
+          "thresholds": [],
+          "type": "hidden",
           "unit": "short"
         },
         {
@@ -412,6 +400,7 @@
       "type": "table"
     }
   ],
+  "refresh": "1m",
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
@@ -421,7 +410,7 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-12h",
     "to": "now"
   },
   "timepicker": {
@@ -452,5 +441,5 @@
   "timezone": "",
   "title": "Home",
   "uid": "eBmc4ZLiz",
-  "version": 11
+  "version": 1
 }
