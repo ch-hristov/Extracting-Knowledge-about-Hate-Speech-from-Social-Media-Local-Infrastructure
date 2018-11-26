@@ -15,6 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
+  "id": 2,
+  "iteration": 1543250388174,
   "links": [
     {
       "asDropdown": true,
@@ -26,6 +28,15 @@
       ],
       "title": "Dashboards",
       "type": "dashboards"
+    },
+    {
+      "icon": "cloud",
+      "tags": [],
+      "targetBlank": true,
+      "title": "Swagger",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost:8080/swagger-ui.html#/"
     }
   ],
   "panels": [
@@ -34,12 +45,11 @@
       "colorBackground": false,
       "colorValue": false,
       "colors": [
-        "#d44a3a",
-        "rgba(237, 129, 40, 0.89)",
-        "#299c46"
+        "#ef843c",
+        "#e24d42",
+        "#d44a3a"
       ],
       "datasource": null,
-      "decimals": 0,
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -49,12 +59,12 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 4,
-        "w": 6,
+        "h": 3,
+        "w": 7,
         "x": 0,
         "y": 0
       },
-      "id": 4,
+      "id": 2,
       "interval": null,
       "links": [],
       "mappingType": 1,
@@ -92,44 +102,22 @@
       "targets": [
         {
           "format": "table",
-          "group": [
-            {
-              "params": [
-                "$__interval",
-                "none"
-              ],
-              "type": "time"
-            }
-          ],
+          "group": [],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT\n  count(tweet)\nFROM\n  tweets\nwhere\n  $__timeFilter(created_at)\n",
+          "rawSql": "SELECT\n  count(tweet)\nFROM\n  tweets\nWHERE\n  $__timeFilter(created_at)\nand\n  country_code in ($country)",
           "refId": "A",
           "select": [
             [
               {
                 "params": [
-                  "tweet"
+                  "value"
                 ],
                 "type": "column"
-              },
-              {
-                "params": [
-                  "count"
-                ],
-                "type": "aggregate"
-              },
-              {
-                "params": [
-                  "tweet"
-                ],
-                "type": "alias"
               }
             ]
           ],
-          "table": "tweets",
-          "timeColumn": "created_at",
-          "timeColumnType": "timestamptz",
+          "timeColumn": "time",
           "where": [
             {
               "name": "$__timeFilter",
@@ -139,27 +127,22 @@
           ]
         }
       ],
-      "thresholds": "0,10",
+      "thresholds": "100",
       "title": "Potential Human Rights Violations",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
         {
           "op": "=",
-          "text": "0",
+          "text": "N/A",
           "value": "null"
-        },
-        {
-          "op": "=",
-          "text": "0",
-          "value": "N/A"
         }
       ],
-      "valueName": "current"
+      "valueName": "total"
     },
     {
-      "circleMaxSize": "20",
-      "circleMinSize": "3",
+      "circleMaxSize": "15",
+      "circleMinSize": "5",
       "colors": [
         "#ef843c",
         "#e24d42"
@@ -169,19 +152,19 @@
       "esMetric": "Count",
       "gridPos": {
         "h": 23,
-        "w": 18,
-        "x": 6,
+        "w": 17,
+        "x": 7,
         "y": 0
       },
       "hideEmpty": false,
       "hideZero": false,
-      "id": 2,
+      "id": 6,
       "initialZoom": "2",
       "links": [],
       "locationData": "countries",
-      "mapCenter": "(0°, 0°)",
-      "mapCenterLatitude": 0,
-      "mapCenterLongitude": 0,
+      "mapCenter": "Europe",
+      "mapCenterLatitude": 46,
+      "mapCenterLongitude": 14,
       "maxDataPoints": 1,
       "mouseWheelZoom": false,
       "showLegend": true,
@@ -196,38 +179,22 @@
       "targets": [
         {
           "format": "time_series",
-          "group": [
-            {
-              "params": [
-                "$__interval",
-                "none"
-              ],
-              "type": "time"
-            }
-          ],
+          "group": [],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT\n  $__time(created_at),\n  count(tweet) as datapoints,\n  country_code as target\nFROM tweets\nWHERE\n  $__timeFilter(created_at)\nGROUP BY \ncountry_code, created_at",
+          "rawSql": "SELECT\n  $__time(created_at),\n  count(tweet) as datapoints,\n  country_code as target\nFROM\n  tweets\nWHERE\n  $__timeFilter(created_at)\nand\n  country_code in ($country)\nGROUP BY \n  created_at, country_code",
           "refId": "A",
           "select": [
             [
               {
                 "params": [
-                  "confidence"
+                  "value"
                 ],
                 "type": "column"
-              },
-              {
-                "params": [
-                  "count"
-                ],
-                "type": "aggregate"
               }
             ]
           ],
-          "table": "tweets",
-          "timeColumn": "created_at",
-          "timeColumnType": "timestamptz",
+          "timeColumn": "time",
           "where": [
             {
               "name": "$__timeFilter",
@@ -242,7 +209,7 @@
       "type": "grafana-worldmap-panel",
       "unitPlural": "Violations",
       "unitSingle": "",
-      "unitSingular": "Volation",
+      "unitSingular": "Violation",
       "valueName": "total"
     },
     {
@@ -250,75 +217,26 @@
       "datasource": null,
       "fontSize": "100%",
       "gridPos": {
-        "h": 19,
-        "w": 6,
+        "h": 20,
+        "w": 7,
         "x": 0,
-        "y": 4
+        "y": 3
       },
-      "id": 6,
+      "id": 4,
       "links": [],
       "pageSize": null,
       "scroll": true,
       "showHeader": true,
       "sort": {
-        "col": 0,
+        "col": 6,
         "desc": true
       },
       "styles": [
         {
-          "alias": "Created",
+          "alias": "Created At",
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "pattern": "created_at",
           "type": "date"
-        },
-        {
-          "alias": "Tweet",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "tweet",
-          "preserveFormat": false,
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
-        },
-        {
-          "alias": "Confidence",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "confidence",
-          "thresholds": [],
-          "type": "number",
-          "unit": "percent"
-        },
-        {
-          "alias": "Country",
-          "colorMode": null,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "dateFormat": "YYYY-MM-DD HH:mm:ss",
-          "decimals": 2,
-          "mappingType": 1,
-          "pattern": "country_code",
-          "thresholds": [],
-          "type": "string",
-          "unit": "short"
         },
         {
           "alias": "",
@@ -353,6 +271,72 @@
           "unit": "short"
         },
         {
+          "alias": "Tweet",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "tweet",
+          "preserveFormat": false,
+          "sanitize": true,
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "processed_tweet",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "alias": "From",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "country_code",
+          "thresholds": [],
+          "type": "string",
+          "unit": "short"
+        },
+        {
+          "alias": "Confidence",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "confidence",
+          "thresholds": [],
+          "type": "number",
+          "unit": "percent"
+        },
+        {
           "alias": "",
           "colorMode": null,
           "colors": [
@@ -373,7 +357,7 @@
           "group": [],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT * from tweets where $__timeFilter(created_at)",
+          "rawSql": "SELECT\n  *\nFROM \n  tweets\nwhere\n  $__timeFilter(created_at)\nand\n  country_code in ($country)",
           "refId": "A",
           "select": [
             [
@@ -395,22 +379,95 @@
           ]
         }
       ],
-      "title": "Potential Violations",
+      "title": "Potential Human Rights Violations",
       "transform": "table",
       "type": "table"
     }
   ],
-  "refresh": "1m",
+  "refresh": "30s",
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
-    "HRVSM-Home"
+    "HRVSM-HOME"
   ],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "allValue": "'__'",
+        "current": {
+          "tags": [],
+          "text": "AE + AG + AR + AU + BB + BD + BH + BM + BW + CA + CD + CN + DE + FR + GB + GH + ID + IE + IN + IQ + JM + JP + KE + KR + KW + MX + MY + NG + NL + NO + NZ + PE + PH + PK + PL + RU + SA + SE + SG + TN + TR + TT + TZ + US + ZA + ZW",
+          "value": [
+            "AE",
+            "AG",
+            "AR",
+            "AU",
+            "BB",
+            "BD",
+            "BH",
+            "BM",
+            "BW",
+            "CA",
+            "CD",
+            "CN",
+            "DE",
+            "FR",
+            "GB",
+            "GH",
+            "ID",
+            "IE",
+            "IN",
+            "IQ",
+            "JM",
+            "JP",
+            "KE",
+            "KR",
+            "KW",
+            "MX",
+            "MY",
+            "NG",
+            "NL",
+            "NO",
+            "NZ",
+            "PE",
+            "PH",
+            "PK",
+            "PL",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "TN",
+            "TR",
+            "TT",
+            "TZ",
+            "US",
+            "ZA",
+            "ZW"
+          ]
+        },
+        "datasource": "HRVSM",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Country",
+        "multi": true,
+        "name": "country",
+        "options": [],
+        "query": "select country_code from tweets",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 1,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-5y",
     "to": "now"
   },
   "timepicker": {
@@ -439,7 +496,7 @@
     ]
   },
   "timezone": "",
-  "title": "Home",
-  "uid": "eBmc4ZLiz",
-  "version": 1
+  "title": "HRVSM - Home",
+  "uid": "lyX0MFLik",
+  "version": 39
 }
