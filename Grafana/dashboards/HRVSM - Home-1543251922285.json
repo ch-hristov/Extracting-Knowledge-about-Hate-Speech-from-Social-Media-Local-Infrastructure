@@ -15,8 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 2,
-  "iteration": 1543250388174,
+  "iteration": 1546611589081,
   "links": [
     {
       "asDropdown": true,
@@ -233,7 +232,7 @@
       },
       "styles": [
         {
-          "alias": "Created At",
+          "alias": "Tweeted At",
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "pattern": "created_at",
           "type": "date"
@@ -337,6 +336,22 @@
           "unit": "percent"
         },
         {
+          "alias": "User",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "user_name",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
           "alias": "",
           "colorMode": null,
           "colors": [
@@ -395,55 +410,11 @@
       {
         "allValue": "'__'",
         "current": {
-          "tags": [],
-          "text": "AE + AG + AR + AU + BB + BD + BH + BM + BW + CA + CD + CN + DE + FR + GB + GH + ID + IE + IN + IQ + JM + JP + KE + KR + KW + MX + MY + NG + NL + NO + NZ + PE + PH + PK + PL + RU + SA + SE + SG + TN + TR + TT + TZ + US + ZA + ZW",
+          "text": "IN + PH + US",
           "value": [
-            "AE",
-            "AG",
-            "AR",
-            "AU",
-            "BB",
-            "BD",
-            "BH",
-            "BM",
-            "BW",
-            "CA",
-            "CD",
-            "CN",
-            "DE",
-            "FR",
-            "GB",
-            "GH",
-            "ID",
-            "IE",
             "IN",
-            "IQ",
-            "JM",
-            "JP",
-            "KE",
-            "KR",
-            "KW",
-            "MX",
-            "MY",
-            "NG",
-            "NL",
-            "NO",
-            "NZ",
-            "PE",
             "PH",
-            "PK",
-            "PL",
-            "RU",
-            "SA",
-            "SE",
-            "SG",
-            "TN",
-            "TR",
-            "TT",
-            "TZ",
-            "US",
-            "ZA",
-            "ZW"
+            "US"
           ]
         },
         "datasource": "HRVSM",
@@ -498,5 +469,5 @@
   "timezone": "",
   "title": "HRVSM - Home",
   "uid": "lyX0MFLik",
-  "version": 39
+  "version": 1
 }
