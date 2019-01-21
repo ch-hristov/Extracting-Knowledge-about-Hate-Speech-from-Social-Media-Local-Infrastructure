@@ -408,7 +408,7 @@
   "templating": {
     "list": [
       {
-        "allValue": "'__'",
+        "allValue": "",
         "current": {
           "text": "IN + PH + US",
           "value": [
