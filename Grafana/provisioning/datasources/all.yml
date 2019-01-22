@@ -16,19 +16,19 @@ datasources:
   # <int> org id. will default to orgId 1 if not specified
   orgId: 1
   # <string> url
-  url: 192.168.0.17:5432
+  url: hrvsm-rds-london.cpvrtou5wgma.eu-west-2.rds.amazonaws.com:5432
   # <string> database password, if used
-  password: postgres
+  password: sYbx7pSrBF9WXtR3NBBLtV4dgEuVWLLj
   # <string> database user, if used
-  user: postgres
+  user: yx9UP4pRzY5EdqhAZnQgSk35fXWrdM8r
   # <string> database name, if used
-  database: dev_hrvsm
+  database: hrvsm
   # <bool> mark as default datasource. Max one per org
   isDefault: true
   # <map> fields that will be converted to json and stored in jsonData
   jsonData:
     sslmode: 'disable'
   secureJsonData:
-    password: 'postgres'
+    password: 'sYbx7pSrBF9WXtR3NBBLtV4dgEuVWLLj'
   # <bool> allow users to edit datasources from the UI.
   editable: true
