@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1546611589081,
+  "iteration": 1548191076506,
   "links": [
     {
       "asDropdown": true,
@@ -31,11 +31,11 @@
     {
       "icon": "cloud",
       "tags": [],
-      "targetBlank": true,
-      "title": "Swagger",
+      "targetBlank": false,
+      "title": "Home",
       "tooltip": "",
       "type": "link",
-      "url": "http://localhost:8080/swagger-ui.html#/"
+      "url": "www.suskins.co.uk"
     }
   ],
   "panels": [
@@ -410,11 +410,10 @@
       {
         "allValue": "",
         "current": {
-          "text": "IN + PH + US",
+          "tags": [],
+          "text": "All",
           "value": [
-            "IN",
-            "PH",
-            "US"
+            "$__all"
           ]
         },
         "datasource": "HRVSM",
