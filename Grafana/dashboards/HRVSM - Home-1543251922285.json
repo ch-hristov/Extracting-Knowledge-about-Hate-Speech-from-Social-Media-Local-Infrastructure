@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1548191682497,
+  "iteration": 1548279708095,
   "links": [
     {
       "asDropdown": true,
@@ -159,9 +159,9 @@
       "initialZoom": "2",
       "links": [],
       "locationData": "countries",
-      "mapCenter": "Europe",
-      "mapCenterLatitude": 46,
-      "mapCenterLongitude": 14,
+      "mapCenter": "(0°, 0°)",
+      "mapCenterLatitude": 0,
+      "mapCenterLongitude": 0,
       "maxDataPoints": 1,
       "mouseWheelZoom": false,
       "showLegend": true,
