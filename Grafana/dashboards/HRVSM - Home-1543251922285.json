@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1548279708095,
+  "iteration": 1548849126094,
   "links": [
     {
       "asDropdown": true,
@@ -224,7 +224,7 @@
       "scroll": true,
       "showHeader": true,
       "sort": {
-        "col": 6,
+        "col": 5,
         "desc": true
       },
       "styles": [
@@ -313,7 +313,7 @@
           "mappingType": 1,
           "pattern": "country_code",
           "thresholds": [],
-          "type": "string",
+          "type": "hidden",
           "unit": "short"
         },
         {
@@ -347,6 +347,22 @@
           "thresholds": [],
           "type": "hidden",
           "unit": "short"
+        },
+        {
+          "alias": "Probability",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 3,
+          "mappingType": 1,
+          "pattern": "probability",
+          "thresholds": [],
+          "type": "number",
+          "unit": "none"
         },
         {
           "alias": "",
