@@ -362,7 +362,7 @@
           "pattern": "probability",
           "thresholds": [],
           "type": "number",
-          "unit": "none"
+          "unit": "percent"
         },
         {
           "alias": "",
