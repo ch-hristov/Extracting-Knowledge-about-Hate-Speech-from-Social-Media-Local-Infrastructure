@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1548882325990,
+  "iteration": 1549038467522,
   "links": [
     {
       "asDropdown": true,
@@ -224,7 +224,7 @@
       "scroll": true,
       "showHeader": true,
       "sort": {
-        "col": 5,
+        "col": 7,
         "desc": true
       },
       "styles": [
@@ -365,7 +365,7 @@
           "pattern": "probability",
           "thresholds": [],
           "type": "number",
-          "unit": "percent"
+          "unit": "percentunit"
         },
         {
           "alias": "",
@@ -484,5 +484,5 @@
   "timezone": "",
   "title": "HRVSM - Home",
   "uid": "lyX0MFLik",
-  "version": 39
+  "version": 1
 }
