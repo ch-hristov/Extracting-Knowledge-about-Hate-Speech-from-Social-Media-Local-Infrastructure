@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1549038832708,
+  "iteration": 1549039549953,
   "links": [
     {
       "icon": "external link",
@@ -147,8 +147,8 @@
       "links": [],
       "locationData": "countries",
       "mapCenter": "Last GeoHash",
-      "mapCenterLatitude": 55.378051,
-      "mapCenterLongitude": -3.435973,
+      "mapCenterLatitude": 37.09024,
+      "mapCenterLongitude": -95.712891,
       "maxDataPoints": 1,
       "mouseWheelZoom": false,
       "showLegend": true,
@@ -352,7 +352,7 @@
           "pattern": "probability",
           "thresholds": [],
           "type": "number",
-          "unit": "percentunit"
+          "unit": "percent"
         },
         {
           "alias": "",
@@ -412,8 +412,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "JoshuaGarfield",
-          "value": "JoshuaGarfield"
+          "text": "liyahjeniseee",
+          "value": "liyahjeniseee"
         },
         "datasource": "HRVSM",
         "definition": "select user_name from tweets",
@@ -424,7 +424,7 @@
         "name": "User",
         "options": [
           {
-            "selected": true,
+            "selected": false,
             "text": "JoshuaGarfield",
             "value": "JoshuaGarfield"
           },

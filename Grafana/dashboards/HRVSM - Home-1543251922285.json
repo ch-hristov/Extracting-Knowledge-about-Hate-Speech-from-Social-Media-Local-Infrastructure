@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1549038467522,
+  "iteration": 1549039474367,
   "links": [
     {
       "asDropdown": true,
@@ -365,7 +365,7 @@
           "pattern": "probability",
           "thresholds": [],
           "type": "number",
-          "unit": "percentunit"
+          "unit": "percent"
         },
         {
           "alias": "",
