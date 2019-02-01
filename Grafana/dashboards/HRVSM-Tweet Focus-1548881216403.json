@@ -15,8 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 4,
-  "iteration": 1548882238909,
+  "iteration": 1549038832708,
   "links": [
     {
       "icon": "external link",
@@ -353,7 +352,7 @@
           "pattern": "probability",
           "thresholds": [],
           "type": "number",
-          "unit": "percent"
+          "unit": "percentunit"
         },
         {
           "alias": "",
@@ -890,5 +889,5 @@
   "timezone": "",
   "title": "HRVSM-Tweet Focus",
   "uid": "qbcckalik",
-  "version": 7
+  "version": 1
 }
