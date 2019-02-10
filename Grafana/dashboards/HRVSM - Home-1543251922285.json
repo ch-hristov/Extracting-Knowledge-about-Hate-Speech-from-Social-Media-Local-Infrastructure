@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1549039474367,
+  "iteration": 1549833187527,
   "links": [
     {
       "asDropdown": true,
@@ -42,6 +42,8 @@
     {
       "cacheTimeout": null,
       "colorBackground": false,
+      "colorPostfix": false,
+      "colorPrefix": false,
       "colorValue": false,
       "colors": [
         "#ef843c",
@@ -79,8 +81,8 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
+      "postfix": " Violations",
+      "postfixFontSize": "70%",
       "prefix": "",
       "prefixFontSize": "50%",
       "rangeMaps": [
@@ -92,7 +94,7 @@
       ],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
+        "full": true,
         "lineColor": "rgb(31, 120, 193)",
         "show": false
       },
@@ -139,11 +141,13 @@
       "valueName": "total"
     },
     {
-      "circleMaxSize": "15",
-      "circleMinSize": "5",
+      "circleMaxSize": "20",
+      "circleMinSize": "7",
       "colors": [
         "#ef843c",
-        "#e24d42"
+        "#c15c17",
+        "#58140c",
+        "#bf1b00"
       ],
       "decimals": 0,
       "esMetric": "Count",
@@ -201,7 +205,7 @@
           ]
         }
       ],
-      "thresholds": "100",
+      "thresholds": "50,100,1000",
       "title": "Potential Human Rights Violations",
       "type": "grafana-worldmap-panel",
       "unitPlural": "Violations",
