@@ -20,7 +20,7 @@
     {
       "icon": "external link",
       "tags": [
-        "HRVSM-HOME"
+        "HSSM-HOME"
       ],
       "type": "dashboards"
     }
@@ -405,7 +405,7 @@
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
-    "HRVSM"
+    "HSSM"
   ],
   "templating": {
     "list": [
@@ -887,7 +887,7 @@
     ]
   },
   "timezone": "",
-  "title": "HRVSM-Tweet Focus",
+  "title": "HSSM-Tweet Focus",
   "uid": "qbcckalik",
   "version": 1
 }

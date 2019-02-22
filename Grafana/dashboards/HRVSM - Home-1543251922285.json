@@ -23,7 +23,7 @@
       "includeVars": true,
       "keepTime": true,
       "tags": [
-        "HRVSM"
+        "HSSM"
       ],
       "title": "Dashboards",
       "type": "dashboards"
@@ -128,7 +128,7 @@
         }
       ],
       "thresholds": "100",
-      "title": "Potential Human Rights Violations",
+      "title": "Hate Speech",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -206,7 +206,7 @@
         }
       ],
       "thresholds": "50,100,1000",
-      "title": "Potential Human Rights Violations",
+      "title": "Hate Speech",
       "type": "grafana-worldmap-panel",
       "unitPlural": "Violations",
       "unitSingle": "",
@@ -282,7 +282,7 @@
           "decimals": 2,
           "link": true,
           "linkTooltip": "See More",
-          "linkUrl": "d/qbcckalik/hrvsm-tweet-focus?from=now-5y&to=now&var-User=${__cell_2}",
+          "linkUrl": "d/qbcckalik/hssm-tweet-focus?from=now-5y&to=now&var-User=${__cell_2}",
           "mappingType": 1,
           "pattern": "tweet",
           "preserveFormat": false,
@@ -414,7 +414,7 @@
           ]
         }
       ],
-      "title": "Potential Human Rights Violations",
+      "title": "Hate Speech",
       "transform": "table",
       "type": "table"
     }
@@ -423,7 +423,7 @@
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
-    "HRVSM-HOME"
+    "HSSM-HOME"
   ],
   "templating": {
     "list": [
@@ -486,7 +486,7 @@
     ]
   },
   "timezone": "",
-  "title": "HRVSM - Home",
+  "title": "HSSM - Home",
   "uid": "lyX0MFLik",
   "version": 1
 }
