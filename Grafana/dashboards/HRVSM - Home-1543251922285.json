@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1549833187527,
+  "iteration": 1550930436283,
   "links": [
     {
       "asDropdown": true,
@@ -23,7 +23,7 @@
       "includeVars": true,
       "keepTime": true,
       "tags": [
-        "HSSM"
+        "HRVSM"
       ],
       "title": "Dashboards",
       "type": "dashboards"
@@ -50,6 +50,7 @@
         "#e24d42",
         "#d44a3a"
       ],
+      "datasource": null,
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -128,7 +129,7 @@
         }
       ],
       "thresholds": "100",
-      "title": "Hate Speech",
+      "title": "Potential Human Rights Violations",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -149,6 +150,7 @@
         "#58140c",
         "#bf1b00"
       ],
+      "datasource": null,
       "decimals": 0,
       "esMetric": "Count",
       "gridPos": {
@@ -206,7 +208,7 @@
         }
       ],
       "thresholds": "50,100,1000",
-      "title": "Hate Speech",
+      "title": "Potential Human Rights Violations",
       "type": "grafana-worldmap-panel",
       "unitPlural": "Violations",
       "unitSingle": "",
@@ -215,6 +217,7 @@
     },
     {
       "columns": [],
+      "datasource": null,
       "fontSize": "100%",
       "gridPos": {
         "h": 20,
@@ -280,7 +283,7 @@
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
-          "link": true,
+          "link": false,
           "linkTooltip": "See More",
           "linkUrl": "d/qbcckalik/hssm-tweet-focus?from=now-5y&to=now&var-User=${__cell_2}",
           "mappingType": 1,
@@ -414,7 +417,7 @@
           ]
         }
       ],
-      "title": "Hate Speech",
+      "title": "Potential Human Rights Violations",
       "transform": "table",
       "type": "table"
     }
@@ -423,7 +426,7 @@
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
-    "HSSM-HOME"
+    "HRVSM-Home"
   ],
   "templating": {
     "list": [
@@ -486,7 +489,7 @@
     ]
   },
   "timezone": "",
-  "title": "HSSM - Home",
+  "title": "HRVSM - Home",
   "uid": "lyX0MFLik",
   "version": 1
 }
