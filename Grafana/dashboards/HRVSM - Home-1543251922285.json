@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1550930436283,
+  "iteration": 1551122550769,
   "links": [
     {
       "asDropdown": true,
@@ -23,7 +23,7 @@
       "includeVars": true,
       "keepTime": true,
       "tags": [
-        "HRVSM"
+        "HSSM"
       ],
       "title": "Dashboards",
       "type": "dashboards"
@@ -82,8 +82,8 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "postfix": " Violations",
-      "postfixFontSize": "70%",
+      "postfix": " Tweets",
+      "postfixFontSize": "50%",
       "prefix": "",
       "prefixFontSize": "50%",
       "rangeMaps": [
@@ -129,7 +129,7 @@
         }
       ],
       "thresholds": "100",
-      "title": "Potential Human Rights Violations",
+      "title": "Hate Speech",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
@@ -208,7 +208,7 @@
         }
       ],
       "thresholds": "50,100,1000",
-      "title": "Potential Human Rights Violations",
+      "title": "Hate Speech Map",
       "type": "grafana-worldmap-panel",
       "unitPlural": "Violations",
       "unitSingle": "",
@@ -417,7 +417,7 @@
           ]
         }
       ],
-      "title": "Potential Human Rights Violations",
+      "title": "Hate Speech Details",
       "transform": "table",
       "type": "table"
     }
@@ -426,7 +426,7 @@
   "schemaVersion": 16,
   "style": "dark",
   "tags": [
-    "HRVSM-Home"
+    "HSSM-Home"
   ],
   "templating": {
     "list": [
@@ -489,7 +489,7 @@
     ]
   },
   "timezone": "",
-  "title": "HRVSM - Home",
+  "title": "HSSM - Home",
   "uid": "lyX0MFLik",
   "version": 1
 }
