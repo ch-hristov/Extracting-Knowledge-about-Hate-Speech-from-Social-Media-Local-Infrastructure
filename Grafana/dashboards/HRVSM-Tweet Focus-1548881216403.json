@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1551122658958,
+  "iteration": 1551369202999,
   "links": [
     {
       "icon": "external link",
@@ -35,7 +35,6 @@
         "#e24d42",
         "#d44a3a"
       ],
-      "datasource": null,
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -130,10 +129,9 @@
       "circleMaxSize": "15",
       "circleMinSize": "5",
       "colors": [
-        "#ef843c",
-        "#e24d42"
+        "#FF780A",
+        "#E02F44"
       ],
-      "datasource": null,
       "decimals": 0,
       "esMetric": "Count",
       "gridPos": {
@@ -193,14 +191,13 @@
       "thresholds": "10",
       "title": "Source of $User",
       "type": "grafana-worldmap-panel",
-      "unitPlural": "Violations",
+      "unitPlural": "Tweets",
       "unitSingle": "",
-      "unitSingular": "Violation",
+      "unitSingular": "Tweet",
       "valueName": "total"
     },
     {
       "columns": [],
-      "datasource": null,
       "fontSize": "100%",
       "gridPos": {
         "h": 20,
@@ -405,7 +402,7 @@
       "type": "table"
     }
   ],
-  "schemaVersion": 16,
+  "schemaVersion": 18,
   "style": "dark",
   "tags": [
     "HSSM"

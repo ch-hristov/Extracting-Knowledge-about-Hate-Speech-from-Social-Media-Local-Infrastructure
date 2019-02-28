@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1551122550769,
+  "iteration": 1551369141234,
   "links": [
     {
       "asDropdown": true,
@@ -50,7 +50,6 @@
         "#e24d42",
         "#d44a3a"
       ],
-      "datasource": null,
       "format": "none",
       "gauge": {
         "maxValue": 100,
@@ -145,12 +144,11 @@
       "circleMaxSize": "20",
       "circleMinSize": "7",
       "colors": [
-        "#ef843c",
-        "#c15c17",
-        "#58140c",
-        "#bf1b00"
+        "#FFB357",
+        "#FF780A",
+        "#E02F44",
+        "#C4162A"
       ],
-      "datasource": null,
       "decimals": 0,
       "esMetric": "Count",
       "gridPos": {
@@ -210,14 +208,13 @@
       "thresholds": "50,100,1000",
       "title": "Hate Speech Map",
       "type": "grafana-worldmap-panel",
-      "unitPlural": "Violations",
+      "unitPlural": "Tweets",
       "unitSingle": "",
-      "unitSingular": "Violation",
+      "unitSingular": "Tweet",
       "valueName": "total"
     },
     {
       "columns": [],
-      "datasource": null,
       "fontSize": "100%",
       "gridPos": {
         "h": 20,
@@ -423,7 +420,7 @@
     }
   ],
   "refresh": "30s",
-  "schemaVersion": 16,
+  "schemaVersion": 18,
   "style": "dark",
   "tags": [
     "HSSM-Home"
