@@ -61,7 +61,11 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 My Minimum Viable Product is tagged as 1.0.0
 
 ### Version History
-1.0.0 Initial Docker Infastructure which includes PostgreSQL and basic dashboard.
+1.0.0 Initial Release | Twitter Integration | Grafana Visualisation | Hate Speech Trained Classifier. - 08/12/2018.
+
+2.0.0 Reworked API | Control Interface | Retrained Hate Speech Model. - 23/01/2019.
+
+2.1.0 Refactor to Hate Speech from Human Rights | Confidence Measure | Improved Control Interface | Improved Classifier. - 10/4/2019
 
 ## Authors
 * Ben Suskins 
@@ -70,5 +74,7 @@ My Minimum Viable Product is tagged as 1.0.0
 * [Twitter Hosebird Client](https://github.com/twitter/hbc)
 * [Spring Framework](https://spring.io/)
 * [Apache Maven](https://maven.apache.org/)
+* [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/)
+* [Grafana](https://grafana.com/)
 * [Hate Speech Training Data](https://github.com/t-davidson/hate-speech-and-offensive-language)
 * [Sentiment 140 Training Data](http://help.sentiment140.com/for-students/)
