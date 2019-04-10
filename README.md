@@ -1,8 +1,9 @@
 # Extracting Knowledge About Hate Speech from Social Media - Docker Infastructure
 This project uses Social Media sites such as Twitter to extract knowledge about the usage of Hate Speech online.
 
-The system is developed in Java using the Spring framework, running on Amazon Web Services and backed by a PostgreSQL database feeding data into Grafana for monitoring and visualisation. The full system is available online at www.suskins.co.uk.
+The system is developed in Java using the Spring framework, running on Amazon Web Services (AWS) and backed by a PostgreSQL database feeding data into Grafana for monitoring and visualisation.  
 
+The full system is available online at www.suskins.co.uk.
 ## Getting Started 
 
 ### Prerequisites
